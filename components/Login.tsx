@@ -37,7 +37,7 @@ const Login = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:8080/check-auth", {
+        const res = await fetch("https://jastip-be.onrender.com/check-auth", {
           method: "GET",
           credentials: "include",
         });
@@ -66,7 +66,7 @@ const Login = () => {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:8080/login", {
+      const response = await fetch("https://jastip-be.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

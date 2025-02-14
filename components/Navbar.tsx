@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ user, setUser }) => {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch("http://localhost:8080/logout", {
+      const res = await fetch("https://jastip-be.onrender.com/logout", {
         method: "POST",
         credentials: "include", // Send cookies with the request
       });

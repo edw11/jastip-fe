@@ -18,12 +18,12 @@ export default function Hero({ user }: { user: User }) {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await fetch("http://localhost:8080/post", {
+        const res = await fetch("https://jastip-be.onrender.com/post", {
           method: "GET",
           credentials: "include", // Send cookies with the request
         });
 
-        if (!res.ok) throw new Error("Failed to fetch data");
+        if (!res.ok) console.log("Token Invalid");
 
         const data = await res.json();
         setPost(data);

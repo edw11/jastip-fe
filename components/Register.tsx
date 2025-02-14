@@ -69,7 +69,7 @@ const Register = () => {
     setMessage(""); // Clear previous message
 
     try {
-      const response = await fetch("http://localhost:8080/register", {
+      const response = await fetch("https://jastip-be.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

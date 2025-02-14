@@ -40,7 +40,7 @@ const JastipForm = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       console.log("run");
-      const response = await fetch("http://localhost:8080/create", {
+      const response = await fetch("https://jastip-be.onrender.com/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

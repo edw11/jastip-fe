@@ -1,12 +1,14 @@
 export default async function checkAuth() {
   try {
-    const res = await fetch("http://localhost:8080/check-auth", {
+    const res = await fetch("https://jastip-be.onrender.com/check-auth", {
       method: "GET",
       credentials: "include", // This ensures cookies are included in the request
     });
 
     // Check if the response is successful
     if (!res.ok) {
+      const data = await res.json();
+      console.log(data?.message);
       return false;
     }
 
