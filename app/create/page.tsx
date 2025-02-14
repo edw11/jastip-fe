@@ -5,7 +5,7 @@ import checkAuth from "@/utils/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const route = useRouter();
   const [user, setUser] = useState<{
     id?: string;
@@ -48,4 +48,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

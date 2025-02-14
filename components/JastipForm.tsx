@@ -52,11 +52,14 @@ const JastipForm = () => {
       const data = await response.json();
 
       if (!response.ok) {
+        console.log(data.message);
         return;
       }
 
       window.location.href = "/";
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   const form = useForm<z.infer<typeof formSchema>>({

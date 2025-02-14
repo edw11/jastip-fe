@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
-export default function page() {
+export default function Page() {
   const route = useRouter();
   const [user, setUser] = useState<{
     id?: string;

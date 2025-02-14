@@ -78,11 +78,12 @@ const Login = () => {
       if (!response.ok) {
         setMessage(data?.message || "Sign in failed");
         setLoading(false);
-        return;
+        return null;
       } else {
         router.push("/");
       }
     } catch (error) {
+      console.log(error);
       setMessage("An unexpected error occured");
     } finally {
       setLoading(false);

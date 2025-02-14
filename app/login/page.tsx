@@ -1,6 +1,6 @@
 import Login from "@/components/Login";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="flex justify-center items-center h-screen w-full pt-10">
       <Login />
@@ -8,4 +8,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

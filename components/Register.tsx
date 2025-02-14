@@ -86,6 +86,7 @@ const Register = () => {
 
       window.location.href = "/";
     } catch (error) {
+      console.log(error);
       setMessage("An unexpected error occurred");
     } finally {
       setTimeout(() => {
@@ -205,7 +206,7 @@ const Register = () => {
                         },
                       }}
                       endpoint="imageUploader"
-                      onUploadBegin={(res) => {
+                      onUploadBegin={() => {
                         setIsUploading(true);
                       }}
                       onClientUploadComplete={(res) => {
